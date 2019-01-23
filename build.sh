@@ -69,6 +69,7 @@ for ARG in "$@"; do
         --dbg|--debug       ) flags="$flags -DCMAKE_BUILD_TYPE=Debug"   ; build="$root/build_dbg";;
         --rel|--release     ) flags="$flags -DCMAKE_BUILD_TYPE=Release" ; build="$root/build_rel";;
         --prof              ) flags="$flags -DCMAKE_BUILD_TYPE=Prof"    ; build="$root/build_prof";;
+		--compdb			) flags="$flags -DCMAKE_EXPORT_COMPILE_COMMANDS=ON";;
         --strip             ) flags="$flags -DCMAKE_BUILD_STRIP=TRUE" ;;
         --glsl              ) flags="$flags -DGLSL_API=TRUE" ;;
         --egl               ) flags="$flags -DEGL_API=TRUE" ;;
